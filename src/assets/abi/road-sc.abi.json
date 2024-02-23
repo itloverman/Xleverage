@@ -1,0 +1,310 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.72.0-nightly",
+            "commitHash": "43062c43d2a63cf4e261c6eddc417575c4f3062f",
+            "commitDate": "2023-06-09",
+            "channel": "Nightly",
+            "short": "rustc 1.72.0-nightly (43062c43d 2023-06-09)"
+        },
+        "contractCrate": {
+            "name": "road-sc",
+            "version": "0.0.0"
+        },
+        "framework": {
+            "name": "multiversx-sc",
+            "version": "0.47.2"
+        }
+    },
+    "docs": [
+        "An empty contract. To be used as a template when starting a new contract from scratch."
+    ],
+    "name": "RoadScContract",
+    "constructor": {
+        "inputs": [],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "upgrade",
+            "mutability": "mutable",
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "open",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "*"
+            ],
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "fight",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "*"
+            ],
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u32"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "viewCommonContext",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "CommonContext"
+                }
+            ]
+        },
+        {
+            "name": "viewOpenedBets",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "List<BetContext>"
+                }
+            ]
+        },
+        {
+            "name": "viewClosedBets",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "List<BetContext>"
+                }
+            ]
+        },
+        {
+            "name": "viewBet",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u32"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "BetContext"
+                }
+            ]
+        },
+        {
+            "name": "viewLiderboards",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "List<LiderboardContext>"
+                }
+            ]
+        },
+        {
+            "name": "viewLiderboard",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "user_address",
+                    "type": "Address"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "LiderboardContext"
+                }
+            ]
+        },
+        {
+            "name": "viewNftContexts",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "nonces",
+                    "type": "variadic<u64>",
+                    "multi_arg": true
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "List<NftContext>"
+                }
+            ]
+        },
+        {
+            "name": "viewNftContext",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "nft_nonce",
+                    "type": "u64"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "NftContext"
+                }
+            ]
+        },
+        {
+            "name": "initConfig",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "fee_percent",
+                    "type": "u64"
+                },
+                {
+                    "name": "fee_address",
+                    "type": "Address"
+                },
+                {
+                    "name": "bet_token_id",
+                    "type": "TokenIdentifier"
+                },
+                {
+                    "name": "nft_token_id",
+                    "type": "TokenIdentifier"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "setNftRank",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "nonces",
+                    "type": "List<u64>"
+                },
+                {
+                    "name": "ranks",
+                    "type": "List<u64>"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "reset",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [],
+            "outputs": []
+        }
+    ],
+    "esdtAttributes": [],
+    "hasCallback": false,
+    "types": {
+        "BetContext": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "bet_id",
+                    "type": "u32"
+                },
+                {
+                    "name": "bet_creator_address",
+                    "type": "Address"
+                },
+                {
+                    "name": "bet_creator_nft_nonce",
+                    "type": "u64"
+                },
+                {
+                    "name": "bet_fighter_nft_nonce",
+                    "type": "u64"
+                },
+                {
+                    "name": "bet_creator_nft_rank",
+                    "type": "u64"
+                },
+                {
+                    "name": "bet_fighter_nft_rank",
+                    "type": "u64"
+                },
+                {
+                    "name": "bet_amount",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "bet_opened_timestamp",
+                    "type": "u64"
+                },
+                {
+                    "name": "bet_closed_timestamp",
+                    "type": "u64"
+                }
+            ]
+        },
+        "CommonContext": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "fee_percent",
+                    "type": "u64"
+                },
+                {
+                    "name": "fee_address",
+                    "type": "Address"
+                },
+                {
+                    "name": "bet_token_id",
+                    "type": "TokenIdentifier"
+                },
+                {
+                    "name": "nft_token_id",
+                    "type": "TokenIdentifier"
+                }
+            ]
+        },
+        "LiderboardContext": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "user_address",
+                    "type": "Address"
+                },
+                {
+                    "name": "win_amount",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "lose_amount",
+                    "type": "BigUint"
+                }
+            ]
+        },
+        "NftContext": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "nft_nonce",
+                    "type": "u64"
+                },
+                {
+                    "name": "nft_rank",
+                    "type": "u64"
+                },
+                {
+                    "name": "nft_fight_update_timestamp",
+                    "type": "u64"
+                },
+                {
+                    "name": "nft_is_used",
+                    "type": "bool"
+                }
+            ]
+        }
+    }
+}

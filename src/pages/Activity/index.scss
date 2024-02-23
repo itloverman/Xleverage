@@ -1,0 +1,51 @@
+.activityTable {
+    table {
+        width: 100%;
+
+        @media (max-width: 600px) {
+            width: 250%;
+        }
+    }
+
+    th {
+        border: none !important;
+        text-align: left;
+        padding: 8px;
+        color: #868686;
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2.25rem;
+        padding-left: 2rem;
+        text-align: center;
+    }
+
+    td {
+        border-top: 0.2px solid #211E1E;
+        // padding-left: 2rem;
+        color: #FFF;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-family: Inter;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 2.25rem;
+        text-align: center;
+        /* 400% */
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+
+    overflow-x: auto;
+}
+
+.activityContain {
+    .css-d9c359-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+        background: #013D3C !important;
+        color: white !important;
+
+        @media (max-width: 600px) {
+            background: #1F1F1F !important;
+        }
+    }
+}
