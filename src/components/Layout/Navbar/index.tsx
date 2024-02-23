@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme: any) =>
       display: 'flex',
       flexDirection: 'column',
       width: '100%',
+      zIndex:'4',
       [theme.breakpoints.down('sm')]: {
         width: '100%',
       }
