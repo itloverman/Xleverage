@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme: any) =>
       [theme.breakpoints.down('sm')]: {
         display: 'flex',
         flexDirection: 'column',
-        height: 'auto',
+        height: '140vh',
       }
     },
     dialogComplex: {
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme: any) =>
     },
     dialog: {
       width: '100%',
-      height: '100%',
+      height: '85vh',
       flexShrink: '0',
       borderRadius: '0.625rem',
       border: '0.5px solid #1D2025',

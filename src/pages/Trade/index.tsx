@@ -72,6 +72,7 @@ const useStyles = makeStyles((theme: any) =>
       [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         gridTemplateColumns: '1fr',
+        height: '90vh',
       }
     },
     dialogComplex: {
