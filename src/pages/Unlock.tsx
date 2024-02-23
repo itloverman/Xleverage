@@ -1,11 +1,6 @@
 import React from 'react';
 import {
   AuthRedirectWrapper,
-  ExtensionLoginButton,
-  LedgerLoginButton,
-  OperaWalletLoginButton,
-  WalletConnectLoginButton,
-  WebWalletLoginButton
 } from 'components';
 import { routeNames } from 'routes';
 import { ClassNames } from '@emotion/react';

@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from 'react';
 
 import { useGetAccount, useGetIsLoggedIn } from '@multiversx/sdk-dapp/hooks';
 import { createStyles, makeStyles } from '@mui/styles';
-import { convertBigNumberValueToLocalString, convertWeiToEsdt } from 'utils';
 
 
 const useStyles = makeStyles((theme: any) =>

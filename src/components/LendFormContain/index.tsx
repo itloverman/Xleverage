@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState, useRef, } from 'react';
 import { useGetAccount, useGetIsLoggedIn } from '@multiversx/sdk-dapp/hooks';
 import { createStyles, makeStyles } from '@mui/styles';
-import { convertBigNumberValueToLocalString, convertWeiToEsdt } from 'utils';
 import VectorMark from 'assets/img/VectorMark.svg';
 import { FormControl, Stack, } from '@mui/material';
 
