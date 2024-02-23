@@ -4,7 +4,7 @@ import { AuthRedirectWrapper } from 'components';
 import { createStyles, makeStyles } from '@mui/styles';
 import gradientCircle from 'assets/img/Eclipse.svg';
 import ConnectWalletBtn from 'components/ConnectWalletBtn';
-import SelectBox from 'components/SelectBox/SelectBox';
+import SelectBox from 'components/SelectBox';
 import { Box, Typography } from '@mui/material';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme: any) =>
       [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
         gridTemplateColumns: '1fr',
-        height: '90vh',
+        height: '80vh',
       }
     },
     dialogComplex: {

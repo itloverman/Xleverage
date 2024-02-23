@@ -4,7 +4,7 @@ import { AuthRedirectWrapper } from 'components';
 import { createStyles, makeStyles } from '@mui/styles';
 import gradientCircle from 'assets/img/Eclipse.svg';
 import ConnectWalletBtn from 'components/ConnectWalletBtn';
-import SelectBox from 'components/SelectBox/SelectBox';
+import SelectBox from 'components/SelectBox';
 import { Box, Typography } from '@mui/material';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme: any) =>
       width: '100%',
       [theme.breakpoints.down('sm')]: {
         width: '100%',
-        height: '152vh',
+        height: '170vh',
         minHeight: 'unset !important',
         marginTop: '-4.5rem',
       }
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme: any) =>
       [theme.breakpoints.down('sm')]: {
         display: 'flex',
         flexDirection: 'column',
-        height: '140vh',
+        height: '159vh',
       }
     },
     dialogComplex: {
