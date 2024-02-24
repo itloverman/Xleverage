@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useState, useRef, } from 'react';
-import { useGetAccount, useGetIsLoggedIn } from '@multiversx/sdk-dapp/hooks';
 import { createStyles, makeStyles } from '@mui/styles';
 import VectorMark from 'assets/img/VectorMark.svg';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { FormControl, Stack, } from '@mui/material';
 import MenuItem from '@mui/material/MenuItem';
 import onedexIcon from 'assets/img/one.svg';
-import { ClassNames } from '@emotion/react';
 
 const useStyles = makeStyles((theme: any) =>
     createStyles({
@@ -31,7 +29,6 @@ const useStyles = makeStyles((theme: any) =>
         },
         selectbox: {
             color: 'white !important',
-            background: 'unset !important',
         },
         menuItem: {
             display: 'flex',
@@ -76,6 +73,34 @@ const SelectBox = () => {
                 displayEmpty
                 inputProps={{ 'aria-label': 'Without label' }}
                 className={classes.selectbox}
+                MenuProps={{
+                    PaperProps: {
+                        sx: {
+                            bgcolor: '#000515 !important',
+                            // border: 'unset !important',
+                            color: 'white !important',
+
+                            // '& .MuiSelect-icon': {
+                            //     color: 'white !important',
+                            //     transform: 'rotate(0deg) !important'
+                            // }
+                        },
+                    },
+                }}
+                sx={{
+                    '& .MuiSvgIcon-root': {
+                        color: 'white',
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                        border: 'unset !important'
+                    },
+                    '& .MuiOutlinedInput-input': {
+                        display: 'flex !important',
+                        alignItems: 'flex-start !important',
+                        gap: '0.5rem !important',
+                        padding: 'unset !important'
+                    },
+                }}
             >
                 <MenuItem value="" className={classes.menuItem}>
                     <div className={classes.iconBox}>

@@ -45,6 +45,14 @@ const MenuButton = () => {
             exclusive
             aria-label="Platform"
             className={classes.toogleMobileButtonGroup}
+            sx={{
+                '& button.Mui-selected': {
+                    backgroundColor: '#007A74 !important', color: 'white',
+                },
+                '& button': {
+                    color: 'white', backgroundColor: '#000515', textTransform: 'capitalize'
+                }
+            }}
         >
             <ToggleButton value="/swap" className={classes.toogleMobileCustomBtn} onClick={() => navigate('/swap')} > Swap </ToggleButton>
             <ToggleButton value="/trade" className={classes.toogleMobileCustomBtn} onClick={() => navigate('/trade')} > Trade </ToggleButton>

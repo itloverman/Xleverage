@@ -1,8 +1,5 @@
 import React, { useContext, useEffect, useState, useRef, } from 'react';
-import { useGetAccount, useGetIsLoggedIn } from '@multiversx/sdk-dapp/hooks';
 import { createStyles, makeStyles } from '@mui/styles';
-import VectorMark from 'assets/img/VectorMark.svg';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { FormControl, Stack, } from '@mui/material';
 import MenuItem from '@mui/material/MenuItem';
 import Slider from '@mui/material/Slider';
@@ -17,7 +14,7 @@ const useStyles = makeStyles((theme: any) =>
             gap: '1rem',
             alignItems: 'center',
             [theme.breakpoints.down('sm')]: {
-                width:'100%'
+                width: '100%'
             }
         },
         input: {
@@ -40,7 +37,7 @@ const useStyles = makeStyles((theme: any) =>
             fontWeight: '400',
             lineHeight: '2.25rem' /* 300% */
         },
-        
+
         inputBar: {
             background: '#080D1C !important',
             border: 'unset',
@@ -66,8 +63,8 @@ const useStyles = makeStyles((theme: any) =>
             lineHeight: '2.25rem', /* 180% */
             fontFamily: 'Inter',
             textAlign: 'left',
-            display:'flex',
-            alignItems:'center',
+            display: 'flex',
+            alignItems: 'center',
             '&:focus-visible': {
                 outline: 'unset !important',
             },
@@ -97,7 +94,7 @@ const useStyles = makeStyles((theme: any) =>
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '0.8rem 1.5rem',
-            color:'white',
+            color: 'white',
         },
         profitLabel: {
             width: '100%',
@@ -109,7 +106,7 @@ const useStyles = makeStyles((theme: any) =>
             justifyContent: 'space-between',
             padding: '0.8rem 1.5rem',
             color: 'white',
-            marginBottom:'5rem',
+            marginBottom: '5rem',
             [theme.breakpoints.down('sm')]: {
                 marginBottom: 'unset'
             }
@@ -179,7 +176,7 @@ const marks = [
         label: '11x',
     },
     {
-        value: 110 ,
+        value: 110,
         label: '12x',
     },
 ];
@@ -219,6 +216,29 @@ const TradeFormContain = () => {
                     valueLabelDisplay="auto"
                     marks={marks}
                     max={110}
+                    sx={{
+                        color: '#1F2328',
+                        '& .MuiSlider-thumb': {
+                            background: '#03C7BD !important',
+                            width: '1rem !important',
+                            height: '1rem !important'
+                        },
+                        '& .MuiSlider-rail': {
+                            borderRadius: '1.74394rem !important',
+                            background: '#1F2328 !important'
+                        },
+                        '& .MuiSlider-track': {
+                            borderRadius: '1.74394rem !important',
+                            background: 'linear-gradient(90deg, rgba(0, 0, 0, 0.00) -20.66%, #03C7BD 99.19%) !important',
+                            height: '0.5rem !important'
+                        },
+                        '& .MuiSlider-markLabel': {
+                            color: '#7B7B7B !important'
+                        },
+                        '& .MuiSlider-mark': {
+                            backgroundColor: 'unset !important'
+                        },
+                    }}
                 />
             </Box>
             <div className={classes.dataList}>
@@ -257,7 +277,7 @@ const TradeFormContain = () => {
                 <div className={classes.triggerPriceInput}>
                     <input type='text' placeholder='Trigger price in ONE' className={classes.triggerInput} value={inputTriggerPrice} onChange={handleTriggerPriceChange}>
                     </input>
-                    <div style={{ color: '#08F6F1', display:'flex', alignItems:'center'}}>Set</div>
+                    <div style={{ color: '#08F6F1', display: 'flex', alignItems: 'center' }}>Set</div>
                 </div>
                 <div className={classes.profitLabel}>
                     <div>Stop Loss</div>

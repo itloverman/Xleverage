@@ -51,8 +51,8 @@ const useStyles = makeStyles((theme: any) =>
       display: 'flex',
       [theme.breakpoints.down('sm')]: {
         gap: '0rem',
-        flexDirection:'column',
-        alignItems:'center',
+        flexDirection: 'column',
+        alignItems: 'center',
       }
     },
     walletButton: {
@@ -71,13 +71,13 @@ const useStyles = makeStyles((theme: any) =>
       display: 'flex',
       flexDirection: 'column',
       width: '90%',
-      overflow:'auto',
+      overflow: 'auto',
       [theme.breakpoints.down('sm')]: {
         border: 'none',
         background: 'none',
         padding: 'unset',
         paddingLeft: '2rem',
-        width:'100%',
+        width: '100%',
         marginTop: '1.5rem',
       }
     },
@@ -85,16 +85,16 @@ const useStyles = makeStyles((theme: any) =>
       width: '6rem',
       height: '2.5rem',
       [theme.breakpoints.down('sm')]: {
-        borderRadius: '1.25rem !important',
         width: '5rem',
       }
     },
     toogleButtonGroup: {
-      borderRadius: '0.5rem !important',
+      borderRadius: '0.6rem !important',
       border: '0.1px solid #1D2025 !important',
-      background:'#000515',
+      background: '#000515',
       [theme.breakpoints.down('sm')]: {
         borderRadius: '1.25rem !important',
+        backgroundColor: '#000515'
       }
     },
     activityTableHeader: {
@@ -199,8 +199,8 @@ const ActivityPage = () => {
               </div>
             </div>
             <div className={classes.secondLayer}>
-              <MenuButton/>
-              <div className={clsx(classes.activityContainer,'activityContain')}>
+              <MenuButton />
+              <div className={clsx(classes.activityContainer, 'activityContain')}>
                 <div className={classes.activityTableHeader}>
                   <div className={classes.titleFont}>My Activity</div>
                   <div className={classes.filterPart}>
@@ -212,6 +212,15 @@ const ActivityPage = () => {
                       onChange={handleChangeToogle}
                       aria-label="Platform"
                       className={classes.toogleButtonGroup}
+                      sx={{
+                        '& button.Mui-selected': {
+                          borderRadius: '0.6rem !important',
+                          background: '#013D3C !important', color: 'white',
+                        },
+                        '& button': {
+                          color: 'white', backgroundColor: '#000515', textTransform: 'capitalize'
+                        },
+                      }}
                     >
                       <ToggleButton value="web" className={classes.toogleCustomBtn}>All</ToggleButton>
                       <ToggleButton value="default" className={classes.toogleCustomBtn}>Active</ToggleButton>
@@ -306,7 +315,7 @@ const ActivityPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

@@ -10,12 +10,9 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import ConnectWalletBtn from 'components/ConnectWalletBtn';
 import SwapInput from 'components/SwapInput';
 import MenuButton from 'components/MenuButton';
-import clsx from 'clsx';
 import {
   useNavigate
 } from 'react-router-dom';
-
-import './index.scss';
 
 const useStyles = makeStyles((theme: any) =>
   createStyles({
@@ -118,7 +115,7 @@ const useStyles = makeStyles((theme: any) =>
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        gap:'0.5rem'
+        gap: '0.5rem'
       }
     },
 
@@ -137,7 +134,7 @@ const useStyles = makeStyles((theme: any) =>
       padding: '0.5rem 1rem',
       [theme.breakpoints.down('sm')]: {
         padding: '0.4rem 1rem !important',
-        width:'25%'
+        width: '25%'
       }
     },
     selectForm: {
@@ -167,7 +164,7 @@ const useStyles = makeStyles((theme: any) =>
         justifyContent: 'flex-start',
       }
     },
-    
+
   })
 );
 
@@ -184,7 +181,7 @@ const SwapPage = () => {
   ) => {
     setSlipPage(newSlipPage);
   };
- 
+
 
   return (
     <div className='d-flex flex-fill align-items-center container'>
@@ -197,26 +194,36 @@ const SwapPage = () => {
               </div>
             </div>
             <div className={classes.secondLayer}>
-              <MenuButton/>
-              <div className={ classes.dialog }>
-                <div className={ classes.bigtext }>Swap </div>
-                <div className={ classes.dialogContent }>
-                  <div className={ classes.formContainer }>
+              <MenuButton />
+              <div className={classes.dialog}>
+                <div className={classes.bigtext}>Swap </div>
+                <div className={classes.dialogContent}>
+                  <div className={classes.formContainer}>
                     <SwapInput />
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                       <path d="M18.4183 11.3329L16.2933 11.3329L16.2933 19.8329L13.46 19.8329L13.46 11.3329L11.335 11.3329L14.8766 7.08292L18.4183 11.3329ZM24.085 22.6663L21.96 22.6663L21.96 14.1663L19.1266 14.1663L19.1266 22.6663L17.0016 22.6663L20.5433 26.9163L24.085 22.6663Z" fill="#F8F8F8" />
                     </svg>
                     <SwapInput />
                   </div>
-                  <div className={clsx( classes.toogleButtonContain, 'slipPageStyle')}>
-                    <div className={ classes.toogleButtonText}>Slippage</div>
+                  <div className={ classes.toogleButtonContain }>
+                    <div className={classes.toogleButtonText}>Slippage</div>
                     <ToggleButtonGroup
                       color="primary"
-                      value={ slipPage }
+                      value={slipPage}
                       exclusive
-                      onChange={ handleChangeToogle }
+                      onChange={handleChangeToogle}
                       aria-label="Platform"
-                      className={ classes.toogleButtonGroup }
+                      className={classes.toogleButtonGroup}
+                      sx={{
+                        '& button.Mui-selected': {
+                          backgroundColor: '#03C7BD !important', color: 'black', border: '0.5px solid rgba(0, 0, 0, 0.04)',
+                          borderRadius: '0.4rem'
+                        },
+                        '& button': {
+                          color: 'white', backgroundColor: '#080D1C', textTransform: 'capitalize', fontFamily: 'SF Pro Text',
+                          fontSize: '1rem', fontStyle: 'normal', fontWeight: '600', lineHeight: '1.25rem'
+                        }
+                      }}
                     >
                       <ToggleButton value="0.25" className={classes.toogleCustomBtn} >0.25%</ToggleButton>
                       <ToggleButton value="1" className={classes.toogleCustomBtn}>1%</ToggleButton>
