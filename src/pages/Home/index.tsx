@@ -11,7 +11,7 @@ import RoundIcon1 from 'assets/img/Round1.png';
 import RoundIcon2 from 'assets/img/Round2.png';
 import RoundIcon3 from 'assets/img/Round3.png';
 import RoundIcon4 from 'assets/img/Round4.png';
-import homeback from 'assets/img/MainPage.svg';
+import homeback from 'assets/img/MainPage.png';
 import gradientCircle from 'assets/img/Eclipse.svg';
 import zIndex from '@mui/material/styles/zIndex';
 
