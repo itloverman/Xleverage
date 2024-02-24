@@ -1,17 +1,19 @@
 import { dAppName } from 'config';
-import { Leaderboard } from 'pages/Leaderboard';
-import { Rule } from 'pages/Rule';
-import { Disclaimer } from 'pages/Disclaimer';
+import { Trade } from 'pages/Trade';
+import { Swap } from 'pages/Swap';
+import { Lending } from 'pages/Lending';
+import { Activity } from 'pages/Activity';
 import { RouteType } from 'types';
 import { withPageTitle } from './components/PageTitle';
 import { Home } from './pages';
 
 export const routeNames = {
   home: '/',
+  trade:'/trade',
   unlock: '/unlock',
-  disclaimer: '/disclaimer',
-  leaderboard: '/leaderboard',
-  rule: '/rule',
+  swap:'/swap',
+  lending: '/lending',
+  activity: '/activity',
 };
 
 interface RouteWithTitleType extends RouteType {
@@ -25,21 +27,25 @@ export const routes: RouteWithTitleType[] = [
     component: Home
   },
   {
-    path: routeNames.leaderboard,
-    title: 'Leaderboard',
-    component: Leaderboard
+    path: routeNames.trade,
+    title: 'Trade',
+    component: Trade
   },
   {
-    path: routeNames.rule,
-    title: 'rule',
-    component: Rule
+    path: routeNames.swap,
+    title: 'Swap',
+    component: Swap
   },
   {
-    path: routeNames.disclaimer,
-    title: 'disclaimer',
-    component: Disclaimer
+    path: routeNames.lending,
+    title: 'Lending',
+    component: Lending
   },
-  
+  {
+    path: routeNames.activity,
+    title: 'Activity',
+    component: Activity
+  },
 ];
 
 export const mappedRoutes = routes.map((route) => {
