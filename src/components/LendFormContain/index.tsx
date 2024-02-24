@@ -139,8 +139,8 @@ const LendFormContain = () => {
                     <div className={classes.gradientText}>
                         After your offer is matched you will have boosted
                     </div>
-                    <div style={{ display: 'flex', gap:'0.5rem'}}>
-                        <div className={classes.explainText} style={{ color:'white' }}>0</div>
+                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                        <div className={classes.explainText} style={{ color: 'white' }}>0</div>
                         <img src={VectorMark}></img>
                     </div>
                 </div>

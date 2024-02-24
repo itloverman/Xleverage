@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme: any) =>
       fontStyle: 'normal',
       fontWeight: '400',
       lineHeight: '2.25rem',
-      display:'none',
+      display: 'none',
       [theme.breakpoints.down('sm')]: {
         display: 'block',
       }
@@ -154,7 +154,6 @@ const useStyles = makeStyles((theme: any) =>
       gap: '1rem'
     },
     tabsStyle: {
-      background: '#080D1C',
       border: '0.3px solid #1D2025',
       borderRadius: '0.5rem'
     },
@@ -274,11 +273,11 @@ const LendingPage = () => {
               </div>
             </div>
             <div className={classes.secondLayer}>
-              <div className={ classes.mobileRemove }>
+              <div className={classes.mobileRemove}>
                 {/* leftspace */}
               </div>
               <div className={classes.dialogComplex}>
-                <MenuButton/>
+                <MenuButton />
                 <div className={classes.dialog}>
                   <div className={classes.dialogHeader}>
                     <div className={classes.titleText}>Choose token</div>
@@ -287,7 +286,17 @@ const LendingPage = () => {
                   </div>
                   <Box className={classes.dialogContain}>
                     <Box>
-                      <Tabs value={value} onChange={handleTabChange} aria-label="icon position tabs example" className={classes.tabsStyle}>
+                      <Tabs value={value} onChange={handleTabChange} aria-label="icon position tabs example"
+                        sx={{
+                          '& button.Mui-selected': {
+                            backgroundColor: '#03C7BD', color: 'black', border: '0.5px solid rgba(0, 0, 0, 0.04)',
+                            borderRadius: '0.4rem'
+                          },
+                          '& button': {
+                            color: 'white', backgroundColor: '#080D1C', textTransform: 'capitalize', fontFamily: 'SF Pro Text', height: '3.5rem !important',
+                            minHeight: 'unset !important', fontSize: '1rem', fontStyle: 'normal', fontWeight: '600', lineHeight: '1.25rem',
+                          }
+                        }} className={classes.tabsStyle}>
                         <Tab icon={<ArrowDropUpIcon />} iconPosition="end" label="Lend" sx={{ width: '50%' }} />
                         <Tab icon={<ArrowDropDownIcon />} iconPosition="end" label="Borrow" sx={{ width: '50%' }} />
                       </Tabs>

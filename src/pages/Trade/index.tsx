@@ -86,7 +86,6 @@ const useStyles = makeStyles((theme: any) =>
     },
     dialog: {
       width: '100%',
-      height: '100%',
       flexShrink: '0',
       borderRadius: '0.625rem',
       border: '0.5px solid #1D2025',
@@ -100,7 +99,7 @@ const useStyles = makeStyles((theme: any) =>
       [theme.breakpoints.down('sm')]: {
         border: 'none',
         background: 'unset',
-        gridTemplateRows: '0.5fr 10fr 0.5fr',
+        gridTemplateRows: '0.5fr 4.5fr 0.5fr',
       }
     },
     titleText: {
@@ -148,7 +147,6 @@ const useStyles = makeStyles((theme: any) =>
       }
     },
     tabsStyle: {
-      background: '#080D1C',
       border: '0.3px solid #1D2025',
       borderRadius: '0.5rem',
       [theme.breakpoints.down('sm')]: {
@@ -282,7 +280,13 @@ const TradePage = () => {
                   </div>
                   <Box className={classes.dialogContain}>
                     <Box>
-                      <Tabs value={value} onChange={handleTabChange} aria-label="basic tabs example" className={classes.tabsStyle}>
+                      <Tabs value={value} onChange={handleTabChange} aria-label="basic tabs example"
+                        sx={{ 
+                          '& button.Mui-selected': { backgroundColor: '#03C7BD', color: 'black', border: '0.5px solid rgba(0, 0, 0, 0.04)',
+                            borderRadius: '0.4rem' },
+                          '& button': { color: 'white', backgroundColor: '#080D1C', textTransform: 'capitalize', fontFamily: 'SF Pro Text',
+                            fontSize: '1rem', fontStyle: 'normal', fontWeight: '600', lineHeight: '1.25rem' }  
+                        }} className={classes.tabsStyle}>
                         <Tab label="Long" sx={{ width: '50%' }} />
                         <Tab label="Short" sx={{ width: '50%' }} />
                       </Tabs>
@@ -339,7 +343,15 @@ const TradePage = () => {
                   </div>
                 </div>
                 <div className={classes.logContain}>
-                  <Tabs value={logTabValue} onChange={handleLogTabChange} aria-label="basic tabs example">
+                  <Tabs value={logTabValue} onChange={handleLogTabChange} aria-label="basic tabs example"
+                    sx={{
+                      '& button.Mui-selected': {
+                        color: 'white'
+                      },
+                      '& button': {
+                        color: '#666', textTransform: 'capitalize'
+                      }
+                    }}>
                     <Tab label="Open Positions(0)" />
                     <Tab label="Open Positions(0)" />
                     <Tab label="Closed Positions(0)" />

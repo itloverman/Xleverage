@@ -71,15 +71,15 @@ const useStyles = makeStyles((theme: any) =>
         },
         swapDropDown: {
             background: '#000515 !important',
-            minWidth:'8rem !important'
+            minWidth: '8rem !important'
         },
         swapDropDownItem: {
             display: 'flex',
             alignItems: 'flex-start',
             gap: '0.3rem',
-            justifyContent:'center',
-            '&:hover':{
-                background:'#080D1C !important'
+            justifyContent: 'center',
+            '&:hover': {
+                background: '#080D1C !important'
             }
         },
         swapSelectContain: {

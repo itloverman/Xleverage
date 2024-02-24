@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: any) =>
                 display: 'block !important',
                 borderRadius: '1.25rem !important',
                 border: '0.1px solid #1D2025 !important',
-                background:'#000515 !important'
+                background: '#000515 !important'
             }
         },
         toogleMobileCustomBtn: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: any) =>
                 display: 'block',
                 borderRadius: '1.25rem !important',
                 background: 'none !important',
-                marginLeft:'unset !important'
+                marginLeft: 'unset !important'
             }
         },
     })
@@ -45,6 +45,14 @@ const MenuButton = () => {
             exclusive
             aria-label="Platform"
             className={classes.toogleMobileButtonGroup}
+            sx={{
+                '& button.Mui-selected': {
+                    backgroundColor: '#007A74 !important', color: 'white',
+                },
+                '& button': {
+                    color: 'white', backgroundColor: '#000515', textTransform: 'capitalize'
+                }
+            }}
         >
             <ToggleButton value="/swap" className={classes.toogleMobileCustomBtn} onClick={() => navigate('/swap')} > Swap </ToggleButton>
             <ToggleButton value="/trade" className={classes.toogleMobileCustomBtn} onClick={() => navigate('/trade')} > Trade </ToggleButton>
