@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { useGetAccount, useGetIsLoggedIn } from '@multiversx/sdk-dapp/hooks';
+import React from 'react';
+import { Theme } from '@mui/material';
 import { createStyles, makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme) =>
+const useStyles = makeStyles((theme : Theme) =>
     createStyles({
         connectWalletButton: {
             display: 'flex',
