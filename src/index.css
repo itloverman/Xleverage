@@ -38,11 +38,6 @@ code {
   padding: unset !important;
 }
 
-/* .flex-grow-1 {
-  background: url(./assets/img/homeback.png);
-  /* background-size:cover; */
-/* background-repeat:no-repeat; */
-/* } */
 .mx-auto {
   padding: unset !important;
 }
@@ -91,45 +86,9 @@ a {
   gap: 3rem;
 }
 
-.css-d9c359-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
-  color: #111111 !important;
-  background-color: #03C7BD !important;
-}
-
-.css-d9c359-MuiButtonBase-root-MuiToggleButton-root {
-  background-color: #000515 !important;
-  color: white !important;
-}
-
-.css-6hp17o-MuiList-root-MuiMenu-list {
-  background: #000515 !important;
-  color: white !important;
-}
-
-.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
-  background: #080D1C !important;
-}
-
-.css-bpeome-MuiSvgIcon-root-MuiSelect-icon {
-  color: white !important;
-  transform: rotate(0deg) !important;
-}
-
-.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
-  color: white !important;
-}
-
-.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border: unset !important;
-}
-
-.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-  border: unset !important;
-}
-
 .css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
   background-color: unset !important;
-}
+} */
 
 .form-select:focus {
   box-shadow: unset !important;
@@ -139,13 +98,6 @@ a {
   padding: unset !important;
 }
 
-.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
-  display: flex !important;
-  align-items: flex-start !important;
-  gap: 0.5rem !important;
-  padding: unset !important;
-}
-
 .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
   position: unset !important;
 }
@@ -154,47 +106,8 @@ a {
   position: unset !important;
 }
 
-.css-gulbw7-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  color: #090E14 !important;
-  background: #03C7BD !important;
-  border: 0.5px solid rgba(0, 0, 0, 0.04);
-  border-radius: 0.4rem;
-  font-family: 'SF Pro Text';
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.25rem;
-  letter-spacing: -0.005rem;
-}
-
-.css-atf28s-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  color: black !important;
-  background: #03C7BD !important;
-}
-
-.css-atf28s-MuiButtonBase-root-MuiTab-root {
-  color: white !important;
-  min-height: unset !important;
-  height: 3.5rem !important;
-  text-transform: capitalize !important;
-  font-size: 1rem !important;
-  border-radius: 0.45rem !important;
-}
-
 .css-1ujnqem-MuiTabs-root {
   min-height: unset !important;
-}
-
-.css-gulbw7-MuiButtonBase-root-MuiTab-root {
-  color: white !important;
-  text-transform: capitalize !important;
-  font-family: 'SF Pro Text';
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.25rem;
-  /* 166.667% */
-  letter-spacing: -0.005rem;
 }
 
 .css-1aquho2-MuiTabs-indicator {
@@ -203,62 +116,6 @@ a {
 
 .css-19kzrtu {
   padding: unset !important;
-}
-
-.css-yafthl-MuiSlider-markLabel {
-  color: #7B7B7B !important;
-}
-
-.css-1eoe787-MuiSlider-markLabel {
-  color: #7B7B7B !important;
-}
-
-.css-1gv0vcd-MuiSlider-track {
-  border-radius: 1.74394rem !important;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) -20.66%, #03C7BD 99.19%) !important;
-  height: 0.5rem !important;
-}
-
-.css-14pt78w-MuiSlider-rail {
-  border-radius: 1.74394rem !important;
-  background: #1F2328 !important;
-}
-
-.css-jx1sa5-MuiSlider-thumb::before {
-  background: #03C7BD !important;
-  width: 1rem !important;
-  height: 1rem !important;
-}
-
-.css-1tfve6q-MuiSlider-mark {
-  color: #1F2328 !important;
-}
-
-.css-6cwnna-MuiSlider-mark {
-  background-color: unset !important;
-}
-
-.css-1aznpnh-MuiSlider-root {
-  /* color:#03C7BD !important; */
-  color: #1F2328 !important;
-}
-
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  color: white !important;
-}
-
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
-  color: #666 !important;
-  text-transform: capitalize !important;
-}
-
-.css-d9c359-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
-  background: #013D3C !important;
-  color: white !important;
-}
-
-.css-d9c359-MuiButtonBase-root-MuiToggleButton-root {
-  text-transform: capitalize !important;
 }
 
 .css-hip9hq-MuiPaper-root-MuiAppBar-root {
